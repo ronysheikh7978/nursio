@@ -1,0 +1,220 @@
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .pages .row:last-child .col-6 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+
+    /* banner */
+    .banner .logo img {
+        width: 140px;
+    }
+    .banner .logo {
+        height: initial;
+        margin-bottom: 18px;
+        padding-bottom: 20px;
+    }
+    .banner .banner-content h1 {
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 24px;
+    }
+    .banner .banner-content {
+        padding: 60px 0;
+    }
+    .def-btn {
+        height: 45px;
+        line-height: 43px;
+        font-size: 16px;
+    }
+    .banner .banner-content .def-btn {
+        margin-bottom: 10px;
+    }
+
+    /* section title */
+    .section-title {
+        margin-bottom: 20px;
+    }
+    .section-title h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .section-title h2:after, .section-title h2:before {
+        display: none;
+    }
+    .container-miscoo {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    /* pages */
+    .pages {
+        padding: 50px 0 30px;
+    }
+    .pages .single-page .part-text {
+        padding: 9px 30px;
+    }
+    .pages .single-page .part-text span.page-name a {
+        font-size: 16px;
+    }
+
+    /* credits */
+    .credits {
+        padding: 50px 0;
+    }
+    .credits h5 {
+        font-size: 24px;
+    }
+    .credits h5:before, .credits h5:after {
+        display: none;
+    }
+    .credits ul li {
+        margin: 0 10px;
+    }
+    .credits ul li img {
+        height: 30px;
+    }
+
+    /* feature */
+    .feature {
+        padding: 80px 0 0px;
+    }    
+    .feature .single-feature .part-icon img {
+        width: 50px;
+    }
+    .feature .single-feature .part-text h3.title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    /* banner */
+    .banner .logo img {
+        width: 160px;
+    }
+    .banner .logo {
+        height: initial;
+        margin-bottom: 18px;
+        padding-bottom: 20px;
+    }
+    .banner .banner-content h1 {
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 34px;
+    }
+    .banner .banner-content {
+        padding: 80px 0;
+    }
+    .def-btn {
+        height: 50px;
+        line-height: 48px;
+        font-size: 16px;
+    }
+    .banner .banner-content .def-btn {
+        margin-bottom: 10px;
+    }
+
+    /* section title */
+    .section-title h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }    
+    .section-title {
+        margin-bottom: 20px;
+    }
+
+    /* pages */
+    .pages {
+        padding: 70px 0 40px;
+    }
+    .pages .single-page .part-text {
+        padding: 10px 35px;
+    }
+    .pages .single-page .part-text span.page-name a {
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* banner */
+    .banner .banner-content {
+        padding: 100px 0;
+    }
+    .banner .banner-content h1 {
+        font-size: 48px;
+        line-height: 60px;
+        margin-bottom: 34px;
+    }
+    .banner .logo img {
+        width: 200px;
+    }
+    .def-btn {
+        height: 50px;
+        line-height: 48px;
+        font-size: 16px;
+    }
+
+    /* section-title */
+    .section-title {
+        margin-bottom: 30px;
+    }
+     .section-title h2 {
+        font-size: 34px;
+        line-height: 44px;
+    }    
+
+    /* pages */
+    .pages {
+        padding: 80px 0 50px;
+    }
+    .pages .single-page .part-text {
+        padding: 10px 35px;
+    }
+    .pages .single-page .part-text span.page-name a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .banner .part-img {
+        display: none;
+    }
+    .banner .logo img {
+        margin-left: -20px;
+    }
+    .banner .banner-content {
+        padding: 100px 0;
+        text-align: center;
+    }
+    .banner .banner-content h1 {
+        margin-bottom: 44px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .banner .banner-content .part-text {
+        margin-right: -65px;
+    }
+    .pages {
+        padding-bottom: 40px;
+    }
+    .pages .single-page {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 60px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
+    .banner .part-img img {
+        width: 850px;
+    }
+    .banner .banner-content {
+        padding: 160px 0;
+    }
+}

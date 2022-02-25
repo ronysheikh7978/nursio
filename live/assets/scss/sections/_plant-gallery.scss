@@ -1,0 +1,489 @@
+// plant gallery
+.plant-gallery {
+    padding: 120px 0;
+    @include media-breakpoint-down(xl) {
+        padding: 100px 0;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 60px 0;
+    }
+    &.plant-gallery-page {
+        padding: 120px 0 90px;
+        @include media-breakpoint-down(xl) {
+            padding: 100px 0 70px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 60px 0 30px;
+        }
+        @include media-breakpoint-down(mobile) {
+            padding-bottom: 7px;
+        }
+    }
+    &.gallery-sidebar {
+        padding: 0;
+    }
+    .gallery-row, .gallery-row-2, .gallery-row-3, .gallery-row-4 {
+        z-index: 3;
+        position: relative;
+        @include media-breakpoint-between(xl, xxl) {
+            .owl-stage-outer {
+                overflow: visible;
+            }
+        }
+        @include media-breakpoint-down(xl) {
+            max-width: calc(800px - .75rem * 2);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @include media-breakpoint-down(lg) {
+            max-width: calc(570px - .75rem * 2);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @include media-breakpoint-down(md) {
+            max-width: calc(390px - .75rem * 2);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+            left: auto;
+            transform: none;
+        }
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            right: -100px;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            @include media-breakpoint-between(xl, xxl) {
+                display: none;
+            }
+            @include media-breakpoint-down(xxl) {
+                left: -80px;
+                right: -80px;
+            }
+            @include media-breakpoint-down(lg) {
+                left: -75px;
+                right: -75px;
+            }
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+            button {
+                width: 55px;
+                height: 55px;
+                color: $plant-color-0;
+                font-size: 18px;
+                border-radius: 50%;
+                position: relative;
+                z-index: 2;
+                border: 3px solid $plant-color-1;
+                @include transition($transition);
+                @include media-breakpoint-down(xxl) {
+                    width: 50px;
+                    height: 50px;
+                }
+                @include media-breakpoint-down(lg) {
+                    width: 45px;
+                    height: 45px;
+                    border-width: 2px;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 2px;
+                    top: 2px;
+                    right: 2px;
+                    bottom: 2px;
+                    border: 1px solid rgba($white, 0.5);
+                    border-radius: 50%;
+                    background: $gradient-1;
+                    z-index: -1;
+                    @include transition($transition);
+                    opacity: 0;
+                }
+                &:hover {
+                    color: $white;
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+                &.owl-prev {
+                }
+                &.owl-next {
+
+                }
+            }
+        }
+        .owl-dots {
+            display: none;
+        }
+    }
+    .single-img {
+        box-shadow: 2px 2px 20px -7px rgba(0, 0, 0, 0.2);
+        position: relative;
+        margin: 0 0 25px 0;
+        @include media-breakpoint-between(xl, xxl) {
+            width: 360px;
+        }
+        @include media-breakpoint-between(md, lg) {
+            width: 360px;
+        }
+        @include media-breakpoint-down(sm) {
+            width: 350px;
+        }
+        @include media-breakpoint-down(mobile) {
+            width: 296px;
+            margin-bottom: 0;
+        }
+        .part-img {
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            &:after {
+                position: absolute;
+                content: '';
+                left: 15px;
+                top: 15px;
+                right: 15px;
+                bottom: 15px;
+                border-radius: 10px;
+                border: 1px solid rgba($white, 0.7);
+            }
+            img {
+
+            }
+        }
+        .part-text {
+            background: $white;
+            padding: 30px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 60px);
+            background: url('../img/deg-bg.jpg') center center no-repeat;
+            background-size: cover;
+            z-index: 2;
+            text-align: center;
+            border-radius: 10px;
+            @include media-breakpoint-down(mobile) {
+                width: 100%;
+                top: 75%;
+                left: auto;
+                transform: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @include transition($transition);
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 0;
+                right: 0;
+                height: 100%;
+                background: $gradient-1;
+                opacity: .9;
+                z-index: -1;
+                border-radius: 10px;
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                left: 10px;
+                top: 10px;
+                right: 10px;
+                bottom: 0;
+                border: 1px solid rgba($white, 0.2);
+                border-radius: 10px;
+                @include media-breakpoint-down(mobile) {
+                    @include transition($transition);
+                    bottom: 10px;
+                    opacity: 0;
+                }
+            }
+            span.title {
+                display: block;
+                color: $white;
+                font-family: $heading-font;
+                font-size: 22px;
+                line-height: 32px;
+                margin-bottom: 30px;
+                font-weight: 600;
+                margin: 2px 0 18px;
+                position: relative;
+                padding-bottom: 0;
+                @include transition($transition);
+                @include media-breakpoint-down(md) {
+                    font-size: 20px;
+                    line-height: 30px;
+                    margin: 3px 0 17px;
+                }
+                @include media-breakpoint-down(mobile) {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    margin-top: -7px;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                    height: 1px;
+                    width: 0;
+                    background: $white;
+                    opacity: 0;
+                    @include transition($transition);
+                }
+            }
+            p {
+                color: rgba($white, 0.9);
+                font-size: 17px;
+                line-height: 28px;
+                @include transition($transition);
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                margin: 0;
+                font-family: $heading-font;
+                @include media-breakpoint-down(sm) {
+                    font-size: 16px;
+                }
+                @include media-breakpoint-down(mobile) {
+                    opacity: 0;
+                    visibility: hidden;
+                    height: 0;
+                    margin-bottom: -8px;
+                }
+            }
+            a {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 2px solid $white;
+                background: $gradient-1;
+                color: $white;
+                line-height: 44px;
+                font-size: 22px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) rotate(0);
+                bottom: -25px;
+                @include media-breakpoint-down(mobile) {
+                    display: none;
+                }
+            }
+            &:hover {
+                @include media-breakpoint-down(mobile) {
+                    top: 0;
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+                span.title {
+                    padding-bottom: 22px;
+                    margin-bottom: 22px;
+                    margin-top: -7px;
+                    &:after {
+                        opacity: .8;
+                        width: 100px;
+                    }
+                }
+                p {
+                    height: 84px;
+                    visibility: visible;
+                    opacity: 1;
+                    margin-bottom: 17px;
+                    @include media-breakpoint-down(xxl) {
+                        height: 112px;
+                    }
+                    @include media-breakpoint-down(mobile) {
+                        height: 112px;
+                        margin-bottom: -8px;
+                    }
+                }
+                a {
+                    transform: translateX(-50%) rotate(45deg);
+                }
+            }
+        }
+    }
+    .gallery-controller {
+        margin-bottom: 70px;
+        @include media-breakpoint-down(xl) {
+            margin-bottom: 60px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 50px;
+        }
+        @include media-breakpoint-down(mobile) {
+            margin-bottom: 40px;
+        }
+        .nav-tabs {
+            border: none;
+            justify-content: center;
+            @include media-breakpoint-down(mobile) {
+                justify-content: flex-start;
+            }
+            .nav-item {
+                .nav-link {
+                    padding: 0;
+                    border: none;
+                    margin: 0 25px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    @include media-breakpoint-down(lg) {
+                        margin: 0 20px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        margin: 0 15px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        margin: 0 13px;
+                    }
+                    @include media-breakpoint-down(mobile) {
+                        margin: 5px;
+                        width: 134px;
+                        padding: 20px;
+                        border: 1px solid rgb(68 80 74 / 20%);
+                        border-radius: 5px;
+                    }
+                    span {
+                        display: block;
+                        &.icon {
+                            width: 100px;
+                            border-radius: 50%;
+                            border: 2px dashed rgba(153, 153, 153, 0.4);
+                            margin-bottom: 19px;
+                            overflow: hidden;
+                            @include transition($transition);
+                            @include media-breakpoint-down(xl) {
+                                width: 90px;
+                            }
+                            @include media-breakpoint-down(lg) {
+                                width: 80px;
+                            }
+                            @include media-breakpoint-down(sm) {
+                                width: 75px;
+                            }
+                            img {
+                                width: 100%;
+                                padding: 12px;
+                                @include media-breakpoint-down(xl) {
+                                    padding: 10px;
+                                }
+                                @include media-breakpoint-down(sm) {
+                                    padding: 8px;
+                                }
+                            }
+                            position: relative;
+                            z-index: 2;
+                            &:after {
+                                position: absolute;
+                                content: '';
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: $gradient-1;
+                                opacity: 0;
+                                z-index: -1;                            
+                                @include transition($transition);
+                            }
+                        }
+                        &.text {
+                            font-size: 16px;
+                            line-height: 26px;
+                            font-weight: 700;
+                            font-family: $heading-font;
+                            color: rgba(68, 80, 74, 0.6);
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+                            @include transition($transition);
+                            margin-bottom: -7px;
+                            @include media-breakpoint-down(sm) {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    &.active {
+                        background: none;
+                        span {
+                            &.text {
+                                color: #30694b;
+                            }
+                            &.icon {
+                                border: 2px solid $plant-color-1;
+                                border-left-color: $plant-color-4;
+                                border-bottom-color: $plant-color-4;
+                                &:after {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // plants gallery page
+    .gallery-page {
+        @include media-breakpoint-down(xl) {
+            max-width: none;
+            left: 0;
+            transform: none;
+        }
+        .single-img {
+            margin-bottom: 53px;
+            width: auto!important;
+            .part-text {
+                @include media-breakpoint-between(xl, xxl) {
+                    width: calc(100% - 50px);
+                }
+                @include media-breakpoint-down(xl) {
+                    &:hover {
+                        p {
+                            height: 84px;
+                        }
+                    }
+                }
+                @include media-breakpoint-between(md, lg) {
+                    span.title {
+                        font-size: 20px;
+                    }
+                    width: calc(100% - 50px);
+                    &:hover {
+                        p {
+                            height: 112px;
+                        }
+                    }
+                }
+                @include media-breakpoint-down(md) {
+                    &:hover {
+                        p {
+                            height: 56px;
+                        }
+                    }
+                }
+                @include media-breakpoint-down(sm) {
+                    &:hover {
+                        p {
+                            height: 84px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

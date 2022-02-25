@@ -1,0 +1,137 @@
+// statics
+.statics {
+    background: rgba(204, 204, 204, 0.1);
+    padding: 80px 0;
+    &.statics-3 {
+        background: transparent;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 60px 0;
+    }
+    .section-title.sub {
+        display: none;
+    }
+    @include media-breakpoint-up(xl) {
+        .section-title.sub {
+            text-align: left;
+            justify-items: start;
+            margin-bottom: 0;
+            padding-left: 100px;
+            display: grid;
+            h2 {
+                margin-bottom: 0;
+            }
+            &:after {
+                left: -15px;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                background-color: #fafafa;
+                border-left: none;
+                border-right: none;
+                border-top: 10px solid #fafafa;
+                border-bottom: 10px solid #fafafa;
+                background-size: 39px 49px;
+                height: 69px;
+                width: 39px;
+            }
+            &:before {
+                height: 200px;
+                width: 1.5px;
+                left: 4px;
+                top: 50%;
+                transform: translateY(-50%);
+                bottom: auto;
+            }
+        }
+    }
+    .all-statics {
+        margin-right: -40px;
+        @include media-breakpoint-down(xl) {
+            margin-right: 0;
+        }
+    }
+    .single-statics {
+        text-align: center;
+        @include media-breakpoint-between(md, xl) {
+            text-align: center;
+            padding: 40px 0;
+            border: 1px solid rgb(68 80 74 / 20%);
+            border-radius: 20px;
+        }
+        @include media-breakpoint-down(mobile) {
+            text-align: left;
+        }
+        span {
+            display: block;
+            &.icon {
+                width: 100px;
+                background: -webkit-linear-gradient(130deg, rgb(37 82 59 / 50%), rgb(90 171 97 / 50%));
+                padding: 2px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-bottom: 15px;
+                @include media-breakpoint-down(xl) {
+                    width: 90px;
+                }
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+                img {
+                    background: $white;
+                    padding: 20px;
+                    border-radius: 50%;
+                    @include media-breakpoint-down(xl) {
+                        padding: 15px;
+                    }
+                }
+            }
+            &.text {
+                span {
+                    &.number {
+                        font-size: 40px;
+                        line-height: 50px;
+                        font-weight: 400;
+                        margin-bottom: 15px;
+                        color: rgba(68, 80, 74, 0.9);
+                        font-family: $heading-font;
+                        @include media-breakpoint-down(xl) {
+                            font-size: 36px;
+                            line-height: 46px;
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: 30px;
+                            line-height: 40px;
+                            font-weight: 500;
+                        }
+                    }
+                    &.title {
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 700;
+                        color: rgba(68, 80, 74, 0.6);
+                        text-transform: uppercase;
+                        font-family: 'Open sans', sans-serif;
+                        letter-spacing: 1px;
+                        margin-bottom: -7px;
+                        @include media-breakpoint-down(mobile) {
+                            font-size: 15px;
+                            letter-spacing: 0;
+                            line-height: 24px;
+                            margin-bottom: -6px;
+                        }
+                        br {
+                            display: none;
+                            @include media-breakpoint-between(sm, md) {
+                                display: inline;
+                            }
+                            @include media-breakpoint-down(sm) {
+                                display: inline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+// error 404
+.error {
+    padding: 120px 0;
+    @include media-breakpoint-down(xl) {
+        padding: 100px 0;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 60px 0;
+    }
+    .part-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        @include media-breakpoint-down(xl) {
+            align-items: center;
+        }
+        @include media-breakpoint-down(mobile) {
+            align-items: flex-start;
+        }
+        span.sub-title {
+            font-size: 22px;
+            line-height: 32px;
+            font-family: $heading-font;
+            color: rgba(68, 80, 74, 0.8);
+            font-weight: 600;
+            text-transform: capitalize;
+            margin: -8px 0 31px;
+            @include media-breakpoint-down(xxl) {
+                margin-bottom: 34px;
+            }
+            @include media-breakpoint-down(xl) {
+                margin-bottom: 36px;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 20px;
+                line-height: 30px;
+                margin: -7px 0 27px;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: 18px;
+                margin-bottom: 29px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin: -8px 0 31px;
+            }
+            @include media-breakpoint-down(mobile) {
+                font-size: 16px;
+                margin-bottom: 27px;
+            }
+        }
+        h2.error-title {
+            font-size: 100px;
+            line-height: 100%;
+            font-weight: 900;
+            @include text-gradient-1;
+            margin-top: -17px;
+            margin-bottom: 19px;
+            margin-left: -8px;
+            @include media-breakpoint-down(xxl) {
+                font-size: 90px;
+                margin-bottom: 20px;
+            }
+            @include media-breakpoint-down(xl) {
+                font-size: 80px;
+                margin-bottom: 21px;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 70px;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: 60px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            @include media-breakpoint-down(sm) {
+                font-size: 50px;
+            }
+            @include media-breakpoint-down(mobile) {
+                font-size: 40px;
+                margin-left: -3px;
+                margin-bottom: 11px;
+            }
+        }
+        p {
+            font-size: 20px;
+            line-height: 32px;
+            color: rgba(68, 80, 74, 0.7);
+            margin-bottom: 32px;
+            @include media-breakpoint-down(xl) {
+                text-align: center;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 18px;
+                line-height: 30px;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: 17px;
+                line-height: 29px;
+            }
+            @include media-breakpoint-down(mobile) {
+                text-align: left;
+                font-size: 16px;
+                line-height: 27px;
+                margin-bottom: 23px;
+            }
+            br {
+                @include media-breakpoint-down(xxl) {
+                    display: none;
+                }
+            }
+        }
+        a.nurs-btn {
+            margin-right: 0;
+        }
+    }
+    .single-img {
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        @include media-breakpoint-down(xl) {
+            display: none;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            left: 20px;
+            top: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba($white, 0.5);
+            border-radius: 50%;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+// call to action
+.cta {
+    padding: 30px 0;
+    background: url('../img/deg-bg.jpg') center center repeat;
+    background-size: 500px;
+    position: relative;
+    z-index: 2;
+    &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: -webkit-linear-gradient(93deg, #5aab61, #25523b);
+        z-index: -1;
+        opacity: .9;
+    }
+    .part-text {
+        h2 {
+            font-size: 36px;
+            line-height: 52px;
+            color: $white;
+            font-weight: 600;
+            @include media-breakpoint-down(xxl) {
+                font-size: 34px;
+                line-height: 50px;
+            }
+            @include media-breakpoint-down(xl) {
+                font-size: 32px;
+                line-height: 48px;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 28px;
+                line-height: 44px;
+            }
+            @include media-breakpoint-down(md) {
+                text-align: center;
+                margin-top: -11px;
+                margin-bottom: 19px;
+                font-size: 26px;
+                line-height: 42px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-top: -10px;
+                font-size: 24px;
+                line-height: 40px;
+            }
+            @include media-breakpoint-down(mobile) {
+                margin-top: -9px;
+                font-size: 22px;
+                line-height: 34px;
+                margin-bottom: 22px;
+            }
+        }
+    }
+    .cta-button {
+        width: 100%;
+        text-align: right;
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+}

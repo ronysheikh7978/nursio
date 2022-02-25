@@ -1,0 +1,58 @@
+/* =================================
+ Temlate Name : Nursio - Nursery & Natural Plants HTML Template
+ Author Name : ronyworks
+ Date: 13/02/2022
+ Version: 1.0
+ =================================
+
+/* =================================
+ css index
+ =================================
+ *. typography
+ *. section title
+ *. preloader
+ *. scroll to top button
+ *. normalize
+ 1. header
+ 2. banner
+ 3. quotation
+ 4. about
+ 5. call to action
+ 6. plant gallery
+ 7. statics
+ 8. feature
+ 9. testimonial
+ 10. blog
+ 11. newsletter
+ 12. footer
+ 13. breadcrumb
+ 14. contact
+ 15. error
+
+================================= */
+
+// global assets scss
+@import "main/_breakpoints";
+@import "main/_variables";
+@import "main/_mixins";
+@import "main/_global";
+@import "main/_normalize";
+@import "main/_animation";
+
+//=Section scss
+@import "sections/_header";
+@import "sections/_banner";
+@import "sections/_quotation";
+@import "sections/_about";
+@import "sections/_cta";
+@import "sections/_plant-gallery";
+@import "sections/_statics";
+@import "sections/_feature";
+@import "sections/_testimonial";
+@import "sections/_blog";
+@import "sections/_newsletter";
+@import "sections/_footer";
+
+@import "pages/_breadcrumb";
+@import "pages/_contact-section";
+@import "pages/_error";
